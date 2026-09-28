@@ -65,9 +65,7 @@
       <div class="carpet-center">
 
         <span class="carpet-mark"></span>
-
         <span class="carpet-mark"></span>
-
         <span class="carpet-mark"></span>
 
       </div>
@@ -81,15 +79,15 @@
         على الرحب والسعة
       </span>
 
-      <h1>
-        مجلس
+      <h1 class="intro-title">
+        <span>مجلس</span>
         <strong>الفرح</strong>
       </h1>
 
-      <p>
-        ليلة حنة
-        <span data-bind="groomName">مصطفى</span>
-      </p>
+      <div class="intro-event-name">
+        <span>ليلة حنة</span>
+        <strong data-bind="groomName">مصطفى</strong>
+      </div>
 
 
       <button
@@ -102,10 +100,7 @@
           تفضلوا بالدخول
         </span>
 
-        <svg
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M6 12h12M14 7l5 5-5 5"/>
         </svg>
 
@@ -122,7 +117,7 @@
 
 
   <!-- =====================================================
-       FIXED DECORATION
+       BACKGROUND
   ====================================================== -->
 
   <div class="ambient" aria-hidden="true">
@@ -135,10 +130,6 @@
 
   </div>
 
-
-  <!-- =====================================================
-       MAIN
-  ====================================================== -->
 
   <main>
 
@@ -168,17 +159,18 @@
           مجلس
         </span>
 
-        <h1 class="father-name">
-          <span class="father-title">
-            السيد
-          </span>
+        <span class="father-title">
+          السيد
+        </span>
 
-          <span data-bind="fatherName">
-            فاضل عبد الكريم
-          </span>
+        <h1
+          class="father-name"
+          data-bind="fatherName"
+        >
+          فاضل عبد الكريم
         </h1>
 
-        <p>
+        <p class="welcome-host-text">
           يرحب بكم
         </p>
 
@@ -191,13 +183,9 @@
       >
 
         <i></i>
-
         <span></span>
-
         <b></b>
-
         <span></span>
-
         <i></i>
 
       </div>
@@ -223,15 +211,20 @@
       </div>
 
 
-      <div class="groom-stage reveal" data-reveal>
+      <div
+        class="groom-stage reveal"
+        data-reveal
+      >
 
         <span class="groom-small">
           صاحب الليلة
         </span>
 
-        <h2 data-bind="groomName">
-          مصطفى
-        </h2>
+        <div class="groom-name-box">
+          <h2 data-bind="groomName">
+            مصطفى
+          </h2>
+        </div>
 
         <p>
           حضوركم يزيد مجلسنا أنساً
@@ -291,13 +284,11 @@
           class="corridor-center"
           aria-hidden="true"
         >
-
           <span></span>
-
         </div>
 
 
-        <!-- STOP 1 -->
+        <!-- 01 -->
 
         <article
           class="corridor-stop stop-right reveal"
@@ -305,7 +296,7 @@
         >
 
           <div class="stop-number">
-            01
+            <span>01</span>
           </div>
 
           <div class="stop-content">
@@ -327,7 +318,7 @@
         </article>
 
 
-        <!-- STOP 2 -->
+        <!-- 02 -->
 
         <article
           class="corridor-stop stop-left reveal"
@@ -335,7 +326,7 @@
         >
 
           <div class="stop-number">
-            02
+            <span>02</span>
           </div>
 
           <div class="stop-content">
@@ -357,7 +348,7 @@
         </article>
 
 
-        <!-- STOP 3 -->
+        <!-- 03 -->
 
         <article
           class="corridor-stop stop-right reveal"
@@ -365,7 +356,7 @@
         >
 
           <div class="stop-number">
-            03
+            <span>03</span>
           </div>
 
           <div class="stop-content">
@@ -387,7 +378,7 @@
         </article>
 
 
-        <!-- STOP 4 -->
+        <!-- 04 -->
 
         <article
           class="corridor-stop stop-left reveal"
@@ -395,7 +386,7 @@
         >
 
           <div class="stop-number">
-            04
+            <span>04</span>
           </div>
 
           <div class="stop-content">
@@ -417,7 +408,7 @@
         </article>
 
 
-        <!-- STOP 5 -->
+        <!-- 05 -->
 
         <article
           class="corridor-stop stop-right reveal"
@@ -425,7 +416,7 @@
         >
 
           <div class="stop-number">
-            05
+            <span>05</span>
           </div>
 
           <div class="stop-content">
@@ -452,17 +443,15 @@
 
 
     <!-- =================================================
-         GUEST MOMENT
+         GUEST
     ================================================== -->
 
     <section class="guest-section section">
 
       <div class="guest-pattern" aria-hidden="true">
-
         <span></span>
         <span></span>
         <span></span>
-
       </div>
 
 
@@ -543,7 +532,6 @@
       <div class="location-board">
 
         <div class="wood-edge wood-edge-top"></div>
-
         <div class="wood-edge wood-edge-bottom"></div>
 
 
@@ -580,9 +568,14 @@
             data-reveal
           >
 
-            <svg viewBox="0 0 24 24">
-              <path d="M12 21s7-5.3 7-12a7 7 0 1 0-14 0c0 6.7 7 12 7 12Z"/>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+
+              <path
+                d="M12 21s7-5.3 7-12a7 7 0 1 0-14 0c0 6.7 7 12 7 12Z"
+              />
+
               <circle cx="12" cy="9" r="2.4"/>
+
             </svg>
 
             <span data-bind="address">
@@ -605,7 +598,7 @@
               الوصول إلى المجلس
             </span>
 
-            <svg viewBox="0 0 24 24">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M5 12h14M14 7l5 5-5 5"/>
             </svg>
 
@@ -647,10 +640,7 @@
         id="countdown"
       >
 
-        <div
-          class="countdown-item reveal"
-          data-reveal
-        >
+        <div class="countdown-item reveal" data-reveal>
 
           <strong id="days">
             00
@@ -666,10 +656,7 @@
         <div class="countdown-divider"></div>
 
 
-        <div
-          class="countdown-item reveal"
-          data-reveal
-        >
+        <div class="countdown-item reveal" data-reveal>
 
           <strong id="hours">
             00
@@ -685,10 +672,7 @@
         <div class="countdown-divider"></div>
 
 
-        <div
-          class="countdown-item reveal"
-          data-reveal
-        >
+        <div class="countdown-item reveal" data-reveal>
 
           <strong id="minutes">
             00
@@ -704,10 +688,7 @@
         <div class="countdown-divider"></div>
 
 
-        <div
-          class="countdown-item reveal"
-          data-reveal
-        >
+        <div class="countdown-item reveal" data-reveal>
 
           <strong id="seconds">
             00
@@ -742,7 +723,7 @@
 
 
     <!-- =================================================
-         COFFEE SECTION
+         COFFEE
     ================================================== -->
 
     <section class="coffee-section section">
@@ -750,9 +731,7 @@
       <div class="coffee-line" aria-hidden="true">
 
         <span></span>
-
         <i></i>
-
         <span></span>
 
       </div>
@@ -819,7 +798,7 @@
 
           <div class="action-icon">
 
-            <svg viewBox="0 0 24 24">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
               <rect x="4" y="5" width="16" height="15" rx="2"/>
               <path d="M8 3v4M16 3v4M4 9h16"/>
             </svg>
@@ -856,12 +835,10 @@
 
           <div class="action-icon">
 
-            <svg viewBox="0 0 24 24">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
 
               <circle cx="18" cy="5" r="2.5"/>
-
               <circle cx="6" cy="12" r="2.5"/>
-
               <circle cx="18" cy="19" r="2.5"/>
 
               <path d="M8.3 10.8l7.4-4.3M8.3 13.2l7.4 4.3"/>
@@ -908,13 +885,9 @@
         <div class="final-symbols">
 
           <span></span>
-
           <i></i>
-
           <span></span>
-
           <i></i>
-
           <span></span>
 
         </div>
