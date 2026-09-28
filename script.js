@@ -121,9 +121,7 @@ function applyInvitationData() {
         element.dataset.bind;
 
 
-      if (
-        key === "fatherFull"
-      ) {
+      if (key === "fatherFull") {
 
         element.textContent =
           `السيد ${eventConfig.fatherName}`;
@@ -185,6 +183,15 @@ function setupIntro() {
   button.addEventListener(
     "click",
     () => {
+
+      if (
+        intro.classList.contains(
+          "is-open"
+        )
+      ) {
+        return;
+      }
+
 
       intro.classList.add(
         "is-open"
@@ -430,9 +437,7 @@ function setupCountdown() {
       now.getTime();
 
 
-    if (
-      distance <= 0
-    ) {
+    if (distance <= 0) {
 
       daysElement.textContent =
         "00";
@@ -448,18 +453,12 @@ function setupCountdown() {
 
 
       if (countdown) {
-
-        countdown.hidden =
-          true;
-
+        countdown.hidden = true;
       }
 
 
       if (started) {
-
-        started.hidden =
-          false;
-
+        started.hidden = false;
       }
 
 
@@ -469,27 +468,20 @@ function setupCountdown() {
 
 
     const dayMs =
-      1000 *
-      60 *
-      60 *
-      24;
+      1000 * 60 * 60 * 24;
 
 
     const hourMs =
-      1000 *
-      60 *
-      60;
+      1000 * 60 * 60;
 
 
     const minuteMs =
-      1000 *
-      60;
+      1000 * 60;
 
 
     const days =
       Math.floor(
-        distance /
-        dayMs
+        distance / dayMs
       );
 
 
@@ -760,7 +752,7 @@ function downloadCalendar() {
 
 
 /* ==========================================================
-   ICS HELPERS
+   ICS
 ========================================================== */
 
 function toICSDate(date) {
@@ -845,9 +837,7 @@ async function shareInvitation() {
     `يتشرف السيد ${eventConfig.fatherName} بدعوتكم إلى مجلس الفرح بمناسبة حنة ابنه ${eventConfig.groomName}، ${eventConfig.dayName} ${eventConfig.dateText} الساعة ${eventConfig.timeText}.`;
 
 
-  if (
-    navigator.share
-  ) {
+  if (navigator.share) {
 
     try {
 
@@ -1003,7 +993,7 @@ async function copyToClipboard(text) {
 
 
 /* ==========================================================
-   INVITATION URL
+   URL
 ========================================================== */
 
 function getInvitationUrl() {
